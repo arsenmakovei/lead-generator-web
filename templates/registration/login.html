@@ -9,7 +9,12 @@
         <form method="post" class="mt-4" novalidate>
           {% csrf_token %}
           {{ form|crispy }}
-          <button type="submit" class="btn btn-primary">Log-in</button>
+          <button type="submit" class="btn btn-primary font-weight-bold w-100 my-2">Log-in</button>
+          <p class="text-center">
+            Don't have an account?
+            <a href="{% url 'lead_generator:signup' %}" class="text-primary font-weight-bold">Sign UP</a>
+          </p>
+
         </form>
       </div>
     </div>
